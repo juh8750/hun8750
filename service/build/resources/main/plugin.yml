@@ -1,0 +1,55 @@
+name: score
+version: '1.0-SNAPSHOT'
+main: service.Service
+api-version: '1.20'
+logging:
+  sync: false
+
+depend: [HolographicDisplays, ProtocolLib]
+commands:
+#  거래요청:
+#    description: 다른 플레이어에게 거래 요청을 보냅니다.
+#    usage: /거래요청 <플레이어 이름>
+#  거래수락:
+#    description: 거래 요청을 수락합니다.
+#    usage: /거래수락
+#  경매등록:
+#    description: 경매장에 아이템을 등록합니다.
+#    usage: /경매등록 <가격> <수량>
+#  경매장:
+#    description: 경매장에 등록된 아이템을 봅니다.
+#    usage: /경매장
+  돈추가:
+    description: 관리자만 사용할수 있는 권한입니다.(돈추가)
+    usage: /돈추가 <닉네임> <추가할금액> (관리자 전용)
+  송금:
+    description: 돈을 송금하는 명령어 입니다.
+    usage: /송금 <플레이어> <금액>
+#  길드:
+#    description: 길드창을 엽니다.
+#    usage: /길드
+#  길드초대:
+#    description: 길드에 초대할수 있습니다.
+#    usage: /길드초대 <닉네임>(길드장만 가능)
+#  길드수락:
+#    description: 길드 수락
+#    usage: /길드수락
+#  길드목록:
+#    description: 길드 목록 보기
+#    usage: /길드목록
+#  길드생성:
+#    description: 길드를 생성합니다.
+#    usage: /길드생성 <이름>
+  주식:
+    description: 주식 시스템
+    usage: /주식 [매수|매도|목록|보유] [종목] [수량]
+  전광판위치설정:
+    description: "전광판 위치를 현재 위치로 설정합니다."
+    usage: /전광판위치설정
+  debugNick:
+    description: "플레이어에게 패킷으로 닉네임 적용 테스트"
+    usage: "/debugNick <playerUUID> <newNickname>"
+
+  주식조정:
+    description: 주식 등락률 조정
+    usage: /<command> <종목> <등락률>
